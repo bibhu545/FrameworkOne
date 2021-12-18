@@ -1,0 +1,26 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SolutionName>FrameworkOne</SolutionName>
+    <ProjectName>FrameworkOne.Web</ProjectName>
+    <!--<IisFolderName>XXX</IisFolderName>-->
+
+    <SolutionConfiguration>QA</SolutionConfiguration>
+    <!--Configuration will be set based on user selection-->
+
+    <SolutionDir>$(MSBuildThisFileDirectory)..</SolutionDir>
+    <OutputLocation>$(SolutionDir)\bin\</OutputLocation>
+    <WebServer>mywebserver.com</WebServer>
+  </PropertyGroup>
+
+  <Target Name="Build">
+    <!--<MSBuild Projects="$(SolutionDir)\$(SolutionName).sln" ContinueOnError="false" Targets="Clean;Rebuild" Properties="Configuration=Release" />-->
+    <MSBuild Projects="$(ProjectName).csproj" ContinueOnError="false" />
+  </Target>
+
+  <!--<Target Name="CopyOutput">
+    <ItemGroup>
+      <PackagedFiles Include="$(SolutionDir)\$(ProjectName)\obj\$(SolutionConfiguration)\Package\PackageTmp\**\*.*"/>
+    </ItemGroup>
+    <Copy SourceFiles="@(PackagedFiles)" DestinationFiles="@(PackagedFiles->'\\$(WebServer)\$(IisFolderName)\$(SolutionConfiguration)\%(RecursiveDir)%(Filename)%(Extension)')"/>
+  </Target>-->
+</Project>
