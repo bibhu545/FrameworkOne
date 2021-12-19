@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -24,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>4.3</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,6 +108,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="client-app\dist\client-app\3rdpartylicenses.txt" />
+    <Content Include="client-app\dist\client-app\favicon.ico" />
+    <Content Include="client-app\dist\client-app\index.html" />
+    <Content Include="client-app\dist\client-app\main.92bf4868655dc3cfc6aa.js" />
+    <Content Include="client-app\dist\client-app\polyfills.a4021de53358bb0fec14.js" />
+    <Content Include="client-app\dist\client-app\runtime.e227d1a0e31cbccbf8ec.js" />
+    <Content Include="client-app\dist\client-app\styles.3ff695c00d717f2d2a11.css" />
+    <Content Include="client-app\e2e\protractor.conf.js" />
+    <Content Include="client-app\karma.conf.js" />
+    <Content Include="client-app\src\app\app.component.css" />
+    <Content Include="client-app\src\app\app.component.html" />
+    <Content Include="client-app\src\favicon.ico" />
+    <Content Include="client-app\src\index.html" />
+    <Content Include="client-app\src\styles.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -125,6 +141,21 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="deploy.proj" />
+    <Content Include="client-app\.browserslistrc" />
+    <Content Include="client-app\.editorconfig" />
+    <Content Include="client-app\.gitignore" />
+    <Content Include="client-app\angular.json" />
+    <Content Include="client-app\e2e\tsconfig.json" />
+    <Content Include="client-app\package-lock.json" />
+    <Content Include="client-app\package.json" />
+    <Content Include="client-app\README.md" />
+    <Content Include="client-app\src\assets\.gitkeep" />
+    <Content Include="client-app\tsconfig.app.json" />
+    <Content Include="client-app\tsconfig.base.json" />
+    <Content Include="client-app\tsconfig.json" />
+    <Content Include="client-app\tsconfig.spec.json" />
+    <Content Include="client-app\tslint.json" />
+    <Content Include="build.bat" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -224,11 +255,28 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="client-app\e2e\src\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="client-app\e2e\src\app.po.ts" />
+    <TypeScriptCompile Include="client-app\src\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="client-app\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="client-app\src\app\app.component.ts" />
+    <TypeScriptCompile Include="client-app\src\app\app.module.ts" />
+    <TypeScriptCompile Include="client-app\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="client-app\src\environments\environment.ts" />
+    <TypeScriptCompile Include="client-app\src\main.ts" />
+    <TypeScriptCompile Include="client-app\src\polyfills.ts" />
+    <TypeScriptCompile Include="client-app\src\test.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
