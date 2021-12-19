@@ -1,6 +1,6 @@
 cd client-app
 ECHO Angular buid started
-npm run ng build --prod
+npm run build:prod
 ECHO Buid completed
 cd.. 
 
