@@ -108,14 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="client-app\dist\client-app\3rdpartylicenses.txt" />
-    <Content Include="client-app\dist\client-app\favicon.ico" />
-    <Content Include="client-app\dist\client-app\index.html" />
-    <Content Include="client-app\dist\client-app\main.92bf4868655dc3cfc6aa.js" />
-    <Content Include="client-app\dist\client-app\polyfills.a4021de53358bb0fec14.js" />
-    <Content Include="client-app\dist\client-app\runtime.e227d1a0e31cbccbf8ec.js" />
-    <Content Include="client-app\dist\client-app\styles.3ff695c00d717f2d2a11.css" />
-    <Content Include="client-app\e2e\protractor.conf.js" />
     <Content Include="client-app\karma.conf.js" />
     <Content Include="client-app\src\app\app.component.css" />
     <Content Include="client-app\src\app\app.component.html" />
@@ -145,7 +137,6 @@
     <Content Include="client-app\.editorconfig" />
     <Content Include="client-app\.gitignore" />
     <Content Include="client-app\angular.json" />
-    <Content Include="client-app\e2e\tsconfig.json" />
     <Content Include="client-app\package-lock.json" />
     <Content Include="client-app\package.json" />
     <Content Include="client-app\README.md" />
@@ -256,8 +247,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="client-app\e2e\src\app.e2e-spec.ts" />
-    <TypeScriptCompile Include="client-app\e2e\src\app.po.ts" />
     <TypeScriptCompile Include="client-app\src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="client-app\src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="client-app\src\app\app.component.ts" />
